@@ -1,0 +1,51 @@
+# ─── CLEOPATRA ROOT GITIGNORE ───
+
+# OS / System Files
+.DS_Store
+Thumbs.db
+*.swp
+
+# Editor / IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ─── BACKEND (Rust) ───
+backend/target/
+# Cargo.lock is kept for binary reproducibility
+# backend/Cargo.lock
+
+# ─── FRONTEND (Next.js) ───
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.vercel/
+frontend/*.tsbuildinfo
+frontend/next-env.d.ts
+
+# ─── SECURITY & ENVIRONMENT ───
+# Crucial: Ignore all environment and secret files
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials/
+auth.json
+
+# ─── LOGS ───
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ─── DOCKER ───
+# Ignore local docker data/volumes if any are created
+.docker/
+docker/data/
